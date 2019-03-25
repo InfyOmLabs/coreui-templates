@@ -1,0 +1,27 @@
+@extends('layouts.app')
+
+@section('content')
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">$MODEL_NAME_PLURAL$</li>
+    </ol>
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+             @include('flash::message')
+             <div class="row">
+                 <div class="col-lg-12">
+                     <div class="card">
+                         <div class="card-header">
+                             <i class="fa fa-align-justify"></i>
+                             $MODEL_NAME_PLURAL$
+                             <a class="btn btn-primary pull-right" href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') !!}">Add New</a>
+                         </div>
+                         <div class="card-body">
+                             @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.table')
+                         </div>
+                     </div>
+                  </div>
+             </div>
+         </div>
+    </div>
+@endsection
+
