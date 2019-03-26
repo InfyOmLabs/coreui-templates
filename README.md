@@ -19,3 +19,8 @@ Update `templates => 'coreui-templates'`
 
 ##### Publish Layout
 `php artisan infyom.publish:layout`
+
+##
+
+Infyom laravel Generator Installation steps are located [here](http://labs.infyom.com/laravelgenerator/docs/master/installation)
+More about CoreUi [here](https://coreui.io/docs/getting-started/introduction)
