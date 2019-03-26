@@ -13,6 +13,10 @@ To use coreui templates, add following to your composer.json if you haven't.
 Run `composer update` command.
 
 ##### Add Service Provider
+
+`\InfyOm\CoreUITemplates\CoreUITemplatesServiceProvider::class,`
+
+##### Update Configuration
 Update `config/infyom/laravel_generator.php` to use Coreui templates.
 
 Update `templates => 'coreui-templates'`
