@@ -13,7 +13,7 @@ To use coreui templates, add following to your composer.json if you haven't.
 Run `composer update` command.
 
 ##### Add Service Provider
-
+Add following service providers into your providers array in `config/app.php`
 `\InfyOm\CoreUITemplates\CoreUITemplatesServiceProvider::class,`
 
 ##### Update Configuration
