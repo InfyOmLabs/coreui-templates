@@ -17,6 +17,9 @@
                          </div>
                          <div class="card-body">
                              @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.table')
+                              <div class="pull-right mr-3">
+                                     $PAGINATE$
+                              </div>
                          </div>
                      </div>
                   </div>
