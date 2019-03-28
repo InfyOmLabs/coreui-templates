@@ -6,7 +6,7 @@
 
 @section('scripts')
    <script type="text/javascript">
-           $('#publish_at').datetimepicker({
+           $('#$FIELD_NAME$').datetimepicker({
                format: 'YYYY-MM-DD HH:mm:ss',
                useCurrent: true,
                icons: {
