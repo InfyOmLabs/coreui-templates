@@ -18,7 +18,7 @@
                                   <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index') !!}" class="btn btn-ghost-light">Back</a>
                              </div>
                              <div class="card-body">
-                                @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.show_fields')
+                                 @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.show_fields')
                              </div>
                          </div>
                      </div>
