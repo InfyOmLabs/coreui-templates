@@ -5,10 +5,15 @@
 </div>
 
 @section('scripts')
-    <script type="text/javascript">
-        $('#$FIELD_NAME$').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
-            useCurrent: false
-        })
-    </script>
+   <script type="text/javascript">
+           $('#publish_at').datetimepicker({
+               format: 'YYYY-MM-DD HH:mm:ss',
+               useCurrent: true,
+               icons: {
+                   up: "icon-arrow-up-circle icons font-2xl",
+                   down: "icon-arrow-down-circle icons font-2xl"
+               },
+               sideBySide: true
+           })
+       </script>
 @endsection
