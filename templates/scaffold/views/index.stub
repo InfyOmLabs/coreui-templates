@@ -2,7 +2,7 @@
 
 @section('content')
     <ol class="breadcrumb">
-        <li class="breadcrumb-item">$MODEL_NAME_PLURAL$</li>
+        <li class="breadcrumb-item">$MODEL_NAME_PLURAL_HUMAN$</li>
     </ol>
     <div class="container-fluid">
         <div class="animated fadeIn">
@@ -16,7 +16,10 @@
                              <a class="pull-right" href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') !!}"><i class="fa fa-plus-square fa-lg"></i></a>
                          </div>
                          <div class="card-body">
-                             @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.table')
+                             @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.table')
+                              <div class="pull-right mr-3">
+                                     $PAGINATE$
+                              </div>
                          </div>
                      </div>
                   </div>
