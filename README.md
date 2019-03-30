@@ -1,31 +1,9 @@
-# coreui-templates
-Core UI templates for InfyOm Laravel Generator
+CoreUI templates for InfyOm Laravel Generator
+================================================
 
-To use coreui templates, add following to your composer.json if you haven't.
+[![Total Downloads](https://poser.pugx.org/infyomlabs/coreui-templates/downloads)](https://packagist.org/packages/infyomlabs/coreui-templates)
+[![Monthly Downloads](https://poser.pugx.org/infyomlabs/coreui-templates/d/monthly)](https://packagist.org/packages/infyomlabs/coreui-templates)
+[![Daily Downloads](https://poser.pugx.org/infyomlabs/coreui-templates/d/daily)](https://packagist.org/packages/infyomlabs/coreui-templates)
+[![License](https://poser.pugx.org/infyomlabs/adminlte-templates/license)](https://packagist.org/packages/infyomlabs/coreui-templates)
 
-```
-"require": {
-    "infyomlabs/coreui-templates": "dev-master"
-}
-```
-
-##### Run Composer update
-Run `composer update` command.
-
-##### Add Service Provider
-Add following service providers into your providers array in `config/app.php`
-`\InfyOm\CoreUITemplates\CoreUITemplatesServiceProvider::class,`
-
-##### Update Configuration
-Update `config/infyom/laravel_generator.php` to use Coreui templates.
-
-Update `templates => 'coreui-templates'`
-
-##### Publish Layout
-`php artisan infyom.publish:layout`
-
-##
-
-Infyom laravel Generator Installation steps are located [here](http://labs.infyom.com/laravelgenerator/docs/master/installation)
-
-More about CoreUi [here](https://coreui.io/docs/getting-started/introduction)
+Installation steps for [CoreUI](https://coreui.io/docs/getting-started/introduction) templates are located [here](http://labs.infyom.com/laravelgenerator/docs/coreui-templates)
