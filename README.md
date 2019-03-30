@@ -5,7 +5,7 @@ To use coreui templates, add following to your composer.json if you haven't.
 
 ```
 "require": {
-    "infyomlabs/coreui-templates": "dev-master"
+    "infyomlabs/coreui-templates": "5.5.x-dev"
 }
 ```
 
