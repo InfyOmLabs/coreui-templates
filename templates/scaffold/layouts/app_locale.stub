@@ -65,7 +65,7 @@
                     <i class="fa fa-lock"></i>@lang('auth.sign_out')
                 </a>
                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                    @csrf
+                    {!! csrf_field() !!}
                 </form>
             </div>
         </li>
