@@ -25,5 +25,12 @@
         "psr-4": {
             "InfyOm\\CoreUITemplates\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\InfyOm\\CoreUITemplates\\CoreUITemplatesServiceProvider"
+            ]
+        }
     }
 }
