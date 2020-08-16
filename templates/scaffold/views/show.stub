@@ -1,28 +1,29 @@
 @extends('layouts.app')
 
+@section('breadcrumb')
+    <ol class="breadcrumb border-0 m-0 px-0 px-md-3">
+        <li class="breadcrumb-item">
+            <a href="{!! route('posts.index') !!}">Posts</a>
+        </li>
+        <li class="breadcrumb-item active">Detail</li>
+    </ol>
+@endsection
+
 @section('content')
-     <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index') }}">$MODEL_NAME_HUMAN$</a>
-            </li>
-            <li class="breadcrumb-item active">Detail</li>
-     </ol>
-     <div class="container-fluid">
-          <div class="animated fadeIn">
-                 @include('coreui-templates::common.errors')
-                 <div class="row">
-                     <div class="col-lg-12">
-                         <div class="card">
-                             <div class="card-header">
-                                 <strong>Details</strong>
-                                  <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index') }}" class="btn btn-light">Back</a>
-                             </div>
-                             <div class="card-body">
-                                 @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.show_fields')
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-          </div>
+    <div class="container-fluid">
+        <div class="ui-view">
+            <div class="fadeIn">
+                @include('coreui-templates::common.errors')
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.show_fields')
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

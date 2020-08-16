@@ -1,32 +1,42 @@
 @extends('layouts.app')
 
-@section('content')
-    <ol class="breadcrumb">
-          <li class="breadcrumb-item">
+@section('breadcrumb')
+    <ol class="breadcrumb border-0 m-0 px-0 px-md-3">
+        <li class="breadcrumb-item">
              <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index') !!}">$MODEL_NAME_HUMAN$</a>
-          </li>
-          <li class="breadcrumb-item active">Edit</li>
-        </ol>
+        </li>
+        <li class="breadcrumb-item active">Edit</li>
+    </ol>
+@endsection
+
+@section('content')
     <div class="container-fluid">
-         <div class="animated fadeIn">
-             @include('coreui-templates::common.errors')
-             <div class="row">
-                 <div class="col-lg-12">
-                      <div class="card">
-                          <div class="card-header">
-                              <i class="fa fa-edit fa-lg"></i>
-                              <strong>Edit $MODEL_NAME_HUMAN$</strong>
-                          </div>
-                          <div class="card-body">
-                              {!! Form::model($$MODEL_NAME_CAMEL$, ['route' => ['$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.update', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$], 'method' => 'patch'$FILES$]) !!}
+        <div class="ui-view">
+            <div class="fadeIn">
+                @include('coreui-templates::common.errors')
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
 
-                              @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
+                            {!! Form::model($$MODEL_NAME_CAMEL$, ['route' => ['$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.update', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$], 'method' => 'patch'$FILES$]) !!}
 
-                              {!! Form::close() !!}
+                            <div class="card-body">
+                                <div class="row">
+                                    @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
+                                </div>
                             </div>
+
+                            <div class="card-footer">
+                                {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+                                <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index') }}" class="btn btn-secondary">Cancel</a>
+                            </div>
+
+                            {!! Form::close() !!}
+
                         </div>
                     </div>
                 </div>
-         </div>
+            </div>
+        </div>
     </div>
 @endsection
