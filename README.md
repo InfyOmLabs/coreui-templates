@@ -9,7 +9,7 @@ CoreUI Templates for InfyOm Laravel Generator
 [![License](https://poser.pugx.org/infyomlabs/coreui-templates/license)](https://packagist.org/packages/infyomlabs/coreui-templates)
 
 Templates for [CoreUI Theme](https://coreui.io/) for InfyOm Laravel Generator.  
-Read [Documentation](https://infyom.com/open-source/laravelgenerator/docs/8.0/coreui-templates) for detailed installation steps and usage.
+Read [Documentation](https://infyom.com/open-source/laravelgenerator/docs/7.0/coreui-templates) for detailed installation steps and usage.
 
 ## Support Us
 
