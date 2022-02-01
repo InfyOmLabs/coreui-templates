@@ -1,0 +1,26 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8" style="margin-top: 2%">
+                <div class="card" style="width: 40rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">@lang('auth.verify_email.title')</h4>
+                        @if (session('resent'))
+                            <p class="alert alert-success" role="alert">
+                              @lang('auth.verify_email.success')
+                            </p>
+                        @endif
+                        <p class="card-text">
+                           @lang('auth.verify_email.notice')
+                        </p>
+                        <a href="{{ route('verification.resend') }}">
+                           @lang('auth.verify_email.another_req')
+                        </a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
